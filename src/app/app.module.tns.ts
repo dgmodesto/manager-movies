@@ -1,9 +1,11 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { NativeScriptModule } from '@nativescript/angular';
+import { NativeScriptHttpClientModule, NativeScriptModule } from '@nativescript/angular';
 import { AppRoutingModule } from '@src/app/app-routing.module';
 import { AppComponent } from '@src/app/app.component';
+import { InMemoryDataService } from '@src/app/in-memory-data.service';
 import { AboutComponent } from '@src/app/pages/about/about.component';
 import { MovieListComponent } from '@src/app/pages/movie-list/movie-list.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 
@@ -22,6 +24,8 @@ import { MovieListComponent } from '@src/app/pages/movie-list/movie-list.compone
   imports: [
     NativeScriptModule,
     AppRoutingModule,
+    NativeScriptHttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { put204: false, dataEncapsulation: false })
   ],
   providers: [],
   bootstrap: [AppComponent],

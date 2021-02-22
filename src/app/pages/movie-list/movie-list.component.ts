@@ -1,5 +1,7 @@
 // tslint:disable:max-line-length
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '@src/app/shared/models/movie.model';
+import { MovieService } from '@src/app/shared/services/movie.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -8,11 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private movieService: MovieService) { }
 
-  movies = [];
+  movies: Movie[] = [];
 
   ngOnInit() {
+    this.loadMovies();
+  }
+
+  private loadMovies() {
+    this.movieService.getAll().subscribe(movies =>
+      this.movies = movies
+    );
   }
 
 }
