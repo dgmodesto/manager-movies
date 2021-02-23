@@ -47,6 +47,14 @@ export class MovieListComponent implements OnInit {
 
   }
 
+  toggleMovieWatchNext(movie: Movie) {
+    this.movieService.toToggleMovieWatchNext(movie).subscribe();
+  }
+
+  // ---------------------------------------------
+  // Private Methods
+  // ---------------------------------------------
+
   private loadMovies() {
     this.movieService.getAll().subscribe(movies =>
       this.movies = movies
