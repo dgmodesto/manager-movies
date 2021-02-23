@@ -1,8 +1,8 @@
 // tslint:disable:max-line-length
 import { Component, OnInit } from '@angular/core';
+import { MovieListHelper } from '@src/app/pages/movie-list/movie-list.helper';
 import { Movie } from '@src/app/shared/models/movie.model';
 import { MovieService } from '@src/app/shared/services/movie.service';
-
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
@@ -33,9 +33,9 @@ export class MovieListComponent implements OnInit {
     );
   }
 
-  deleteMovie(movie: Movie) {
+  async deleteMovie(movie: Movie) {
     const message = `Deseja mesmo excluir o filme ${movie.title}`;
-    const mustDelete = confirm(message);
+    const mustDelete = await MovieListHelper.showDeleteMovieConfirmation(message);
 
     if (mustDelete) {
 
