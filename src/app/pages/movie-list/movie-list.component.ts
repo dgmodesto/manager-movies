@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { MovieListHelper } from '@src/app/pages/movie-list/movie-list.helper';
 import { Movie } from '@src/app/shared/models/movie.model';
 import { MovieService } from '@src/app/shared/services/movie.service';
+
+
+
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
@@ -49,6 +52,10 @@ export class MovieListComponent implements OnInit {
 
   toggleMovieWatchNext(movie: Movie) {
     this.movieService.toToggleMovieWatchNext(movie).subscribe();
+  }
+
+  showDrawer() {
+    MovieListHelper.showDrawer();
   }
 
   // ---------------------------------------------
