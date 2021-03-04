@@ -7,7 +7,7 @@ import { MovieListComponent } from '@src/app/pages/movie-list/movie-list.compone
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/movies/2/edit', // Rota padrão temporária enquanto o formulário é construído
+    redirectTo: '/movies', // Rota padrão temporária enquanto o formulário é construído
     pathMatch: 'full',
   }, {
     path: 'about',

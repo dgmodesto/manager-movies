@@ -19,7 +19,7 @@ export class MovieService {
 
     return this.http.get(url).pipe(
       map(this.jsonDataToMovies),
-      map(movies => movies.sort((a, b) => b.id = a.id)),
+      map(movies => movies.sort((a, b) => b.id - a.id)),
       catchError(this.handleError)
     );
   }
@@ -69,15 +69,18 @@ export class MovieService {
   /**
    * private methods
    */
-  private jsonDataToMovie(jsonData: any): Movie {
-    return Movie.fromJson(jsonData);
-  }
-
   private jsonDataToMovies(jsonData: any[]): Movie[] {
     const movies: Movie[] = [];
-    jsonData.forEach(element => movies.push(Movie.fromJson(element)));
+
+    jsonData.forEach(
+      element => movies.push(Movie.fromJson(element))
+    );
 
     return movies;
+  }
+
+  private jsonDataToMovie(jsonData: any): Movie {
+    return Movie.fromJson(jsonData);
   }
 
   private handleError(error: any): Observable<any> {

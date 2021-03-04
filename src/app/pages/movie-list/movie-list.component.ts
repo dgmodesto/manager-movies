@@ -60,8 +60,9 @@ export class MovieListComponent implements OnInit {
   // ---------------------------------------------
 
   private loadMovies() {
-    this.movieService.getAll().subscribe(movies =>
-      this.movies = movies
+    this.movieService.getAll().subscribe((movies) => {
+      this.movies = movies;
+    }
     );
   }
 

@@ -16,13 +16,13 @@ export class MovieFormComponent implements OnInit {
   movieForm: FormGroup;
   movie: Movie;
   submittingForm = false;
-  movieRatingOption = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
+  movieRatingOptions = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5];
 
   constructor(
     private location: Location,
-    private readonly route: ActivatedRoute,
-    private readonly movieService: MovieService,
-    private readonly formBuilder: FormBuilder
+    private route: ActivatedRoute,
+    private movieService: MovieService,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit() {

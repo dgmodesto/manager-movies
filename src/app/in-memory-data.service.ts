@@ -4,29 +4,21 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const movies = [
-      { id: 1, title: 'Bastardos Inglórios', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 3, toWatchNext: true },
-      { id: 2, title: 'Guardiões da Galáxia', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 4.5, toWatchNext: false },
-      { id: 3, title: 'Um Contratempo', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 4, toWatchNext: true },
-      { id: 4, title: 'Cidade de Deus', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 4, toWatchNext: true },
-      { id: 5, title: 'Corra', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 5, toWatchNext: true },
-      { id: 6, title: 'Django', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 5, toWatchNext: false },
-      { id: 7, title: 'O Resgate do Soldado Ryan', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 5, toWatchNext: false },
-      { id: 8, title: 'Pulp Fiction', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 5, toWatchNext: false },
-      { id: 9, title: 'O irlândes', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 5, toWatchNext: true },
-      { id: 10, title: 'Os suspeitos', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 5, toWatchNext: false },
-      { id: 11, title: 'John Wick', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 5, toWatchNext: true },
-      { id: 12, title: 'Parasita', obs: 'Dolore eiusmod duis sunt irure occaecat sit reprehenderit sunt aute laborum eu ipsum amet.', rating: 5, toWatchNext: true },
+      { id: 1, title: 'Bastardos Inglórios', obs: 'Lorem ipsum dolor sit amet, consectetur adipiscing', rating: 5, toWatchNext: true },
+      { id: 2, title: 'Guardiões da Galáxia', obs: 'Etiam eget ligula eu lectus lobortis condimentum', rating: 5, toWatchNext: true },
+      { id: 3, title: 'Um Contratempo', obs: 'Duis aute irure dolor in reprehenderit in voluptate', rating: 4.5, toWatchNext: false },
+      { id: 4, title: 'Cidade de Deus', obs: 'Lorem ipsum dolor sit amet, consectetur adipiscing', rating: 4.5, toWatchNext: false },
+      { id: 5, title: 'Corra', obs: 'Etiam eget ligula eu lectus lobortis condimentum', rating: 4, toWatchNext: true },
+      { id: 6, title: 'Django', obs: 'Excepteur sint occaecat cupidatat non proident sit', rating: 4, toWatchNext: false },
+      { id: 7, title: 'O Resgate do Soldado Ryan', obs: 'Ut enim ad minim veniam, quis nostrud exercitation', rating: 4, toWatchNext: false },
+      { id: 8, title: 'Pulp Fiction', obs: 'Duis aute irure dolor in reprehenderit in voluptate', rating: 4, toWatchNext: true },
+      { id: 9, title: 'O Irlandês', obs: 'Excepteur sint occaecat cupidatat non proident sit', rating: null, toWatchNext: true },
+      { id: 10, title: 'Onde os Fracos Não Têm Vez', obs: 'Ut enim ad minim veniam, quis nostrud exercitation', rating: null, toWatchNext: true },
+      { id: 11, title: 'Os Suspeitos', obs: 'Duis aute irure dolor in reprehenderit in voluptate', rating: null, toWatchNext: true },
+      { id: 12, title: 'Era uma vez em Hollywood', obs: 'Etiam eget ligula eu lectus lobortis condimentum', rating: null, toWatchNext: true },
+      { id: 13, title: 'John Wick', obs: 'Lorem ipsum dolor sit amet, consectetur adipiscing', rating: 3.5, toWatchNext: false },
+      { id: 14, title: 'Parasita', obs: 'Etiam eget ligula eu lectus lobortis condimentum', rating: 4, toWatchNext: false },
     ];
     return { movies };
   }
 }
-
-
-/*
-// for requests to an `api` base URL that gets heroes from a 'heroes' collection
-  GET api/heroes          // all heroes
-  GET api/heroes/42       // the hero with id=42
-  GET api/heroes?name=^j  // 'j' is a regex; returns heroes whose name starting with 'j' or 'J'
-  GET api/heroes.json/42  // ignores the ".json"
-
-*/
