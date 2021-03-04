@@ -1,6 +1,5 @@
-import * as app from '@nativescript/core/application';
 import * as dialogs from '@nativescript/core/ui/dialogs';
-import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
+
 
 export class MovieListHelper {
   static showDeleteMovieConfirmation(message: string): Promise<boolean> {
@@ -12,10 +11,5 @@ export class MovieListHelper {
     });
   }
 
-
-  static showDrawer() {
-    const sidedrawer = <RadSideDrawer><any>app.getRootView();
-    sidedrawer.showDrawer();
-  }
 
 }

@@ -5,6 +5,7 @@ import { AppComponent } from '@src/app/app.component';
 import { InMemoryDataService } from '@src/app/in-memory-data.service';
 import { AboutComponent } from '@src/app/pages/about/about.component';
 import { MovieListComponent } from '@src/app/pages/movie-list/movie-list.component';
+import { MobActionBarComponent } from '@src/app/shared/components/mob-action-bar/mob-action-bar.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angular';
 
@@ -20,6 +21,7 @@ import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angul
     AppComponent,
     AboutComponent,
     MovieListComponent,
+    MobActionBarComponent,
   ],
   imports: [
     NativeScriptModule,
